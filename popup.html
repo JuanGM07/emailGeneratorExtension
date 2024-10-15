@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Email Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 800px;
+            padding: 20px;
+        }
+        .input-section {
+            margin-bottom: 15px;
+        }
+        textarea, select {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin-bottom: 10px;
+        }
+        .spinner {
+            display: none;
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Email Writer</h1>
+    <div class="input-section">
+        <label for="topic">Email Topic</label>
+        <textarea id="topic" rows="2" placeholder="Enter the email's topic"></textarea>
+    </div>
+    <div class="input-section">
+        <label for="details">Email Details</label>
+        <textarea id="details" rows="4" placeholder="Enter the details of the email"></textarea>
+    </div>
+    <div class="input-section">
+        <label for="tone">Tone</label>
+        <select id="tone">
+            <option value="professional">Professional</option>
+            <option value="friendly">Friendly</option>
+            <option value="neutral">Neutral</option>
+        </select>
+    </div>
+    <button id="generateBtn">Generate Email</button>
+    <button id="copyBtn">Copy to Clipboard</button>
+    <div class="spinner" id="spinner"></div>
+    <div class="input-section">
+        <label for="result">Generated Email</label>
+        <textarea id="result" rows="8" readonly></textarea>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
