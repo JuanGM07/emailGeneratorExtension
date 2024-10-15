@@ -33,5 +33,5 @@ app.post('/generate-email', async (req, res) => {
     }
 });
 
-app.listen(process.env.PORT);
+app.listen(3000);
 

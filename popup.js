@@ -1,7 +1,3 @@
-require('dotenv').config();
-const apiUrl = process.env.API_URL;
-const port = process.env.PORT;
-const url = `${apiUrl}:${port}/generate-email`;
 document.addEventListener('DOMContentLoaded', function () {
     const generateBtn = document.getElementById('generateBtn');
     const copyBtn = document.getElementById('copyBtn');
@@ -18,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             resultArea.value = '';
 
             try {
-                const response = await fetch(url, {
+                const response = await fetch("https://email-generator-chi.vercel.app/", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
