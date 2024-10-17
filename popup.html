@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            width: 800px;
+            width: 700px;
             padding: 20px;
         }
         .input-section {
@@ -45,10 +45,49 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        /* Estilos para el círculo de la imagen en la parte superior derecha */
+        #profile-pic {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            cursor: pointer;
+        }
+        .paypal-container {
+            text-align: center;
+            margin-top: 10px;
+                }
+
+        .donate-button {
+            background-color: #0070ba;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .donate-button:hover {
+            background-color: #005b9f;
+}
+
+       
     </style>
 </head>
 <body>
     <h1>AI Email Writer</h1>
+    <div class="paypal-container">
+        <button id="donateBtn" class="donate-button">Support me via PayPal</button>
+    </div>  
+    <!-- Imagen de perfil que lleva al perfil de GitHub -->
+    <a href="https://github.com/JuanGM07" target="_blank">
+        <img id="profile-pic" src="https://github.com/JuanGM07.png" alt="Profile Picture">
+    </a>
     <div class="input-section">
         <label for="topic">Email Topic</label>
         <textarea id="topic" rows="2" placeholder="Enter the email's topic"></textarea>

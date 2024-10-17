@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const copyBtn = document.getElementById('copyBtn');
     const resultArea = document.getElementById('result');
     const spinner = document.getElementById('spinner');
-
+    document.getElementById('donateBtn').addEventListener('click', function () {
+        const paypalMeUrl = 'https://paypal.me/JGMDataScience?country.x=ES&locale.x=es_ES'; // Reemplaza con tu enlace
+        window.open(paypalMeUrl, '_blank');
+    });
     chrome.storage.local.get('API_KEY', function(data) {
         const apiKey = data.API_KEY; // Retrieve the API key from storage
 
